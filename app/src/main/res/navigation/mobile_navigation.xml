@@ -3,33 +3,94 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_anuncios">
+    app:startDestination="@+id/nav_inicio">
 
     <fragment
-        android:id="@+id/nav_anuncios"
-        android:name="com.example.hospital_tilisarao.ui.anuncios.AnunciosFragment"
-        android:label="@string/anuncios"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_inicio"
+        android:name="com.example.inmobiliariamiguel.ui.inicio.InicioFragment"
+        android:label="@string/inicio"
+        tools:layout="@layout/fragment_inicio" />
 
     <fragment
         android:id="@+id/nav_perfil"
-        android:name="com.example.hospital_tilisarao.ui.perfil.PerfilFragment"
-        android:label="@string/Perfil"
+        android:name="com.example.inmobiliariamiguel.ui.perfil.PerfilFragment"
+        android:label="@string/perfil"
         tools:layout="@layout/fragment_perfil" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.hospital_tilisarao.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_inmuebles"
+        android:name="com.example.inmobiliariamiguel.ui.inmuebles.InmueblesFragment"
+        android:label="@string/inmueble"
+        tools:layout="@layout/fragment_inmuebles" >
+        <action
+            android:id="@+id/action_nav_inmuebles_to_inmuebleDetalleFragment"
+            app:destination="@id/inmuebleDetalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_inquilinos"
+        android:name="com.example.inmobiliariamiguel.ui.inquilinos.InquilinosFragment"
+        android:label="@string/inquilinos"
+        tools:layout="@layout/inquilinos_fragment" >
+        <action
+            android:id="@+id/action_nav_inquilinos_to_detalleInquilinoFragment"
+            app:destination="@id/detalleInquilinoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_contratos"
+        android:name="com.example.inmobiliariamiguel.ui.contratos.ContratoFragment"
+        android:label="@string/contratos"
+        tools:layout="@layout/contrato_fragment" >
+        <action
+            android:id="@+id/action_nav_contratos_to_detalleContratoFragment"
+            app:destination="@id/detalleContratoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_logout"
-        android:name="com.example.hospital_tilisarao.ui.logout.LogoutFragment"
+        android:name="com.example.inmobiliariamiguel.ui.logout.LogoutFragment"
         android:label="@string/logout"
-        tools:layout="@layout/fragment_logout" />
+        tools:layout="@layout/logout_fragment" />
     <fragment
-        android:id="@+id/nav_nuevo_turno"
-        android:name="com.example.hospital_tilisarao.ui.turnos.NuevoTurnoFragment"
-        android:label="@string/nuevo_turno"
-        tools:layout="@layout/fragment_nuevo_turno" />
+        android:id="@+id/nav_pagos"
+        android:name="com.example.inmobiliariamiguel.ui.pagos.PagosFragment"
+        android:label="@string/pagos"
+        tools:layout="@layout/fragment_pagos" />
+    <fragment
+        android:id="@+id/inmuebleDetalleFragment"
+        android:name="com.example.inmobiliariamiguel.ui.inmuebles.InmuebleDetalleFragment"
+        android:label="Detalle de Inmueble"
+        tools:layout="@layout/fragment_inmueble_detalle" >
+        <action
+            android:id="@+id/action_inmuebleDetalleFragment_to_nav_inmuebles"
+            app:destination="@id/nav_inmuebles" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleContratoFragment"
+        android:name="com.example.inmobiliariamiguel.ui.contratos.DetalleContratoFragment"
+        android:label="Detalle del Contrato"
+        tools:layout="@layout/fragment_detalle_contrato" >
+        <action
+            android:id="@+id/action_detalleContratoFragment_to_nav_contratos"
+            app:destination="@id/nav_contratos" />
+        <action
+            android:id="@+id/action_detalleContratoFragment_to_pagoContratoFragment"
+            app:destination="@id/pagoContratoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagoContratoFragment"
+        android:name="com.example.inmobiliariamiguel.ui.contratos.PagoContratoFragment"
+        android:label="Pagos"
+        tools:layout="@layout/fragment_pago_contrato" >
+        <action
+            android:id="@+id/action_pagoContratoFragment_to_detalleContratoFragment"
+            app:destination="@id/detalleContratoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleInquilinoFragment"
+        android:name="com.example.inmobiliariamiguel.ui.inquilinos.DetalleInquilinoFragment"
+        android:label="fragment_detalle_inquilino"
+        tools:layout="@layout/fragment_detalle_inquilino" >
+        <action
+            android:id="@+id/action_detalleInquilinoFragment_to_nav_inquilinos"
+            app:destination="@id/nav_inquilinos" />
+    </fragment>
 </navigation>

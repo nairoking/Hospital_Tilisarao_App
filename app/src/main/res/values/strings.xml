@@ -1,7 +1,5 @@
 <resources>
-    <string name="app_name">Hospital_Tilisarao</string>
-    <string name="todo">TODO</string>
-    <string name="title_activity_menu_main">Menu_main_Activity</string>
+    <string name="app_name">InmobiliariaMiguel</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -12,8 +10,13 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="anuncios">Anuncios</string>
+    <string name="perfil">Perfil</string>
+    <string name="inicio">Inicio</string>
+    <string name="inmueble">Inmuebles</string>
+    <string name="inquilinos">Inquilinos</string>
+    <string name="contratos">Contratos</string>
     <string name="logout">Logout</string>
-    <string name="nuevo_turno">Nuevo Turno</string>
-    <string name="Perfil">Perfil</string>
+    <string name="pagos">Pagos</string>
+    <string name="yes">Aceptar</string>
+    <string name="no">Cancelar</string>
 </resources>

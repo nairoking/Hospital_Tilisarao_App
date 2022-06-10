@@ -5,24 +5,34 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_anuncios"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/anuncios" />
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/ic_home"
+            android:title="@string/inicio"
+            android:iconTint="@android:color/transparent"
+            />
         <item
             android:id="@+id/nav_perfil"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/Perfil" />
+            android:icon="@drawable/ic_user"
+            android:title="@string/perfil" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_inmuebles"
+            android:icon="@drawable/ic_inmueble"
+            android:title="@string/inmueble" />
         <item
-            android:id="@+id/nav_nuevo_turno"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/nuevo_turno" />
+            android:id="@+id/nav_inquilinos"
+            android:icon="@drawable/ic_user"
+            android:title="@string/inquilinos" />
+        <item
+            android:id="@+id/nav_contratos"
+            android:icon="@drawable/ic_contrato"
+            android:title="@string/contratos" />
+        <item
+            android:id="@+id/nav_pagos"
+            android:icon="@drawable/ic_pagos_s"
+            android:title="@string/pagos" />
         <item
             android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_logout"
             android:title="@string/logout" />
     </group>
 </menu>

@@ -3,30 +3,38 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/drawable/bt_white.xml" value="0.139" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/drawable/btn_style.xml" value="0.2225" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/drawable/et_style.xml" value="0.2225" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/drawable/fondo_degradado.xml" value="0.2" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/drawable/side_nav_bar.xml" value="0.132" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/activity_login.xml" value="0.22146739130434784" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/activity_menu_main.xml" value="0.20923913043478262" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/activity_registro.xml" value="0.23097826086956522" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/app_bar_menu_main.xml" value="0.19791666666666666" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/content_menu_main.xml" value="0.20923913043478262" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_anuncios.xml" value="0.21240942028985507" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_gallery.xml" value="0.20923913043478262" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_home.xml" value="0.21240942028985507" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_logout.xml" value="0.12552083333333333" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_nuevo_turno.xml" value="0.25" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_perfil.xml" value="0.13272543059777103" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_slideshow.xml" value="0.21240942028985507" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/item_anuncio_fragment.xml" value="0.1" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/item_turno_disponible.xml" value="0.5" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/list_item.xml" value="0.12552083333333333" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/nav_header_menu_main.xml" value="0.20923913043478262" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/menu/activity_main_drawer.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/menu/menu_main_.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/drawable/bt_white.xml" value="0.2015" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/drawable/btn_style.xml" value="0.161" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/drawable/fondo_degradado.xml" value="0.161" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/drawable/ic_inmueble_background.xml" value="0.12" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/drawable/ic_launcher_background.xml" value="0.161" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.116" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/drawable/side_nav_bar.xml" value="0.116" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/activity_login.xml" value="0.1947463768115942" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/activity_main.xml" value="0.1947463768115942" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/app_bar_main.xml" value="0.1947463768115942" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/content_main.xml" value="0.1947463768115942" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/contrato_fragment.xml" value="0.12552083333333333" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/fragment_detalle_contrato.xml" value="0.19" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/fragment_detalle_inquilino.xml" value="0.25" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/fragment_home.xml" value="0.1947463768115942" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/fragment_inicio.xml" value="0.14583333333333334" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/fragment_inmueble_detalle.xml" value="0.27014218009478674" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/fragment_inmuebles.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/fragment_pago_contrato.xml" value="0.13272543059777103" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/fragment_pagos.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/fragment_perfil.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/inquilinos_fragment.xml" value="0.12552083333333333" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/item_detalle_pago.xml" value="0.33" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/item_inmueble_alquilado.xml" value="0.25" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/item_inmueble_fragment.xml" value="0.17572463768115942" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/item_inmueble_inquilino.xml" value="0.33" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/logout_fragment.xml" value="0.12552083333333333" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/layout/nav_header_main.xml" value="0.1947463768115942" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/menu/activity_main_drawer.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/menu/main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/mipmap-anydpi-v26/ic_inmueble.xml" value="0.161" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/InmobiliariaMiguel/app/src/main/res/mipmap-anydpi-v26/ic_inmueble_round.xml" value="0.116" />
       </map>
     </option>
   </component>
