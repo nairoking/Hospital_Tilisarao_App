@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/drawable/bt_white.xml" value="0.139" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/drawable/btn_style.xml" value="0.2225" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/drawable/et_style.xml" value="0.2225" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/drawable/fondo_degradado.xml" value="0.2" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/drawable/side_nav_bar.xml" value="0.132" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/activity_login.xml" value="0.22146739130434784" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/activity_menu_main.xml" value="0.20923913043478262" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/activity_registro.xml" value="0.23097826086956522" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/app_bar_menu_main.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/content_menu_main.xml" value="0.20923913043478262" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_anuncios.xml" value="0.21240942028985507" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_gallery.xml" value="0.20923913043478262" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_home.xml" value="0.21240942028985507" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_logout.xml" value="0.12552083333333333" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_nuevo_turno.xml" value="0.25" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_pendiente.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_perfil.xml" value="0.25" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/fragment_slideshow.xml" value="0.21240942028985507" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/item_anuncio_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/item_turno_disponible.xml" value="0.5" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/item_turno_pendiente.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/list_item.xml" value="0.12552083333333333" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/nav_header_menu_main.xml" value="0.20923913043478262" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/menu/activity_main_drawer.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/menu/menu_main_.xml" value="0.27291666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_degradado">
+
+    <EditText
+        android:id="@+id/etDniRegistro"
+        android:layout_width="338dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/bt_white"
+        android:ems="10"
+        android:enabled="true"
+        android:hint="Dni"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNombreRegistro"
+        android:layout_width="338dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:enabled="true"
+        android:inputType="textPersonName"
+        android:background="@drawable/bt_white"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDniRegistro" />
+
+    <EditText
+        android:id="@+id/etApellidoRegistro"
+        android:layout_width="338dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Apellido"
+        android:enabled="true"
+        android:inputType="textPersonName"
+        android:background="@drawable/bt_white"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNombreRegistro" />
+
+    <EditText
+        android:id="@+id/etEmailRegistro"
+        android:layout_width="338dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Email"
+        android:enabled="true"
+        android:inputType="textPersonName"
+        android:background="@drawable/bt_white"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etApellidoRegistro" />
+
+    <EditText
+        android:id="@+id/etTelefonoRegistro"
+        android:layout_width="338dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bt_white"
+        android:ems="10"
+        android:enabled="true"
+        android:hint="Telefono"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etContraseña2Registro" />
+
+    <EditText
+        android:id="@+id/etContraseñaRegistro"
+        android:layout_width="337dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bt_white"
+        android:ems="10"
+        android:enabled="true"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailRegistro" />
+
+    <EditText
+        android:id="@+id/etContraseña2Registro"
+        android:layout_width="337dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/bt_white"
+        android:ems="10"
+        android:enabled="true"
+        android:hint="Repetir Contraseña"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etContraseñaRegistro" />
+
+    <Button
+        android:id="@+id/btRegistrarUser"
+        android:layout_width="259dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/btn_style"
+        android:text="Registrarme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTelefonoRegistro" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

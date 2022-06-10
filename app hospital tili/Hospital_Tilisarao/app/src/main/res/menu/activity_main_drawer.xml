@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_anuncios"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/anuncios" />
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/Perfil" />
+        <item
+            android:id="@+id/nav_pendiente"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/turnos_pendientes" />
+        <item
+            android:id="@+id/nav_nuevo_turno"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/nuevo_turno" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/logout" />
+    </group>
+</menu>
