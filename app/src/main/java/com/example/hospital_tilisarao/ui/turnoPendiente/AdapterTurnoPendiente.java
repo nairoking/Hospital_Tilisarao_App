@@ -39,34 +39,30 @@ public class AdapterTurnoPendiente extends RecyclerView.Adapter<AdapterTurnoPend
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
+        holder.tvCodigoTurno.setText(turnos.get(position).getId() + "");
+        holder.tvDia.setText(turnos.get(position).getFecha() + "");
+        holder.tvHoraro.setText(turnos.get(position).getHoraInicio() + "");
+        holder.tvMedico.setText(turnos.get(position).getMedico().getCompleto() + "-" +turnos.get(position).getMedico().especialidad );
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return turnos.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-/*
-        TextView tvCodigoPago , tvNumeroPago, tvCodigoContratoPagos, tvImporte, tvFechaPago;
+
+        TextView tvCodigoTurno , tvDia, tvHoraro, tvMedico;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvCodigoContratoPagos = itemView.findViewById(R.id.tvCodigoContratoPagos);
-            tvCodigoPago = itemView.findViewById(R.id.tvCodigoPago);
-            tvNumeroPago = itemView.findViewById(R.id.tvNumeroPago);
-            tvImporte = itemView.findViewById(R.id.tvImporte);
-            tvFechaPago = itemView.findViewById(R.id.tvFechaPago);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Bundle bundle = new Bundle();
-                    Contrato cont = contratoPago;
-                    bundle.putSerializable("contrato", cont);
-                    Navigation.findNavController((Activity) context, R.id.nav_host_fragment_content_main).navigate(R.id.pagoContratoFragment, bundle);
-                }
-            });
-        }
-    }*/
-    }
+            tvCodigoTurno = itemView.findViewById(R.id.tvCodigoTurno);
+            tvDia = itemView.findViewById(R.id.tvDia);
+            tvHoraro = itemView.findViewById(R.id.tvHorario);
+            tvMedico = itemView.findViewById(R.id.tvMedico);
 
+
+        }
+    }
 }
+
+

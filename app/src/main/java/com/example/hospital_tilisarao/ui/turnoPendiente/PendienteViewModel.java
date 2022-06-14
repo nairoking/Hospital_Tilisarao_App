@@ -39,7 +39,7 @@ public class PendienteViewModel extends AndroidViewModel {
     }
 
     public void cargarTurnosPendientes(Bundle bundle) {
-        Turno t = (Turno) bundle.getSerializable("turno");
+        //Turno t = (Turno) bundle.getSerializable("turno");
         SharedPreferences sp = context.getSharedPreferences("datos",0);
         String token = sp.getString("token","-1");
         Call<List<Turno>> pag = ApiRest.getMyApiClient().obtenerTurnosPendientes(token);

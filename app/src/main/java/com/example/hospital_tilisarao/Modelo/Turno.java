@@ -9,8 +9,8 @@ import java.sql.Time;
 public class Turno implements Serializable {
 
     public int id;
-    public Time horaInicio;
-    public Date fecha;
+    public String horaInicio;
+    public String fecha;
     public int medicoId;
     public int pacienteId;
     public Paciente paciente;
@@ -24,19 +24,19 @@ public class Turno implements Serializable {
         this.id = id;
     }
 
-    public Time getHoraInicio() {
+    public String getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(Time horaInicio) {
+    public void setHoraInicio(String horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

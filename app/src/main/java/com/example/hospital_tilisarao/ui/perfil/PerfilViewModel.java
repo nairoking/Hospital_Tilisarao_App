@@ -80,7 +80,7 @@ public class PerfilViewModel extends AndroidViewModel {
     public void cambiar(Paciente p){
         SharedPreferences sp = context.getSharedPreferences("datos",0);
         String token = sp.getString("token","-1");
-        Call<Paciente> prop = ApiRest.getMyApiClient().actualizarPropietario(token,p);
+        Call<Paciente> prop = ApiRest.getMyApiClient().actualizarPaciente(token,p);
         prop.enqueue(new Callback<Paciente>() {
             @Override
             public void onResponse(Call<Paciente> call, Response<Paciente> response) {

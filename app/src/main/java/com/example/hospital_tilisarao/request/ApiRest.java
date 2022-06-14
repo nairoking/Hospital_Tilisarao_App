@@ -2,6 +2,7 @@ package com.example.hospital_tilisarao.request;
 
 import android.support.v4.media.MediaDescriptionCompat;
 
+import com.example.hospital_tilisarao.Modelo.Medico;
 import com.example.hospital_tilisarao.Modelo.Paciente;
 import com.example.hospital_tilisarao.Modelo.Turno;
 import com.example.hospital_tilisarao.Modelo.Usuario;
@@ -96,18 +97,24 @@ public class ApiRest {
         @GET("paciente")
         Call<Paciente> obtenerUsuario(@Header("Authorization") String token);
 
+        @GET("medico/getall")
+        Call<List<Medico>> obtenerMedicos(@Header("Authorization") String token);
+
         @POST("paciente/login")
         Call<String> login (@Body Usuario user);
 
         @PUT("paciente/actualizar")
-        Call<Paciente> actualizarPropietario(@Header("Authorization") String token, @Body Paciente paciente);
+        Call<Paciente> actualizarPaciente(@Header("Authorization") String token, @Body Paciente paciente);
 
         @POST("paciente")
-        Call<Paciente>altaPropietario(@Body Paciente paciente);
-
+        Call<Paciente>altaPaciente(@Body Paciente paciente);
 
         @GET("turno/turnopendiente")
         Call<List<Turno>> obtenerTurnosPendientes(@Header("Authorization") String token);
+
+        @POST("paciente")
+        Call<Turno>altaTurno(@Header("Authorization") String token,@Body Paciente paciente);
+
     }
 
 }

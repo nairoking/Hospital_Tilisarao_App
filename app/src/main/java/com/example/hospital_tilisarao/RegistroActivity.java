@@ -51,7 +51,7 @@ public class RegistroActivity extends AppCompatActivity {
                     paciente.setClave(etContraseña.getText().toString());
                     paciente.setEmail(etMail.getText().toString());
 
-                    Call<Paciente> prop = ApiRest.getMyApiClient().altaPropietario(paciente);
+                    Call<Paciente> prop = ApiRest.getMyApiClient().altaPaciente(paciente);
                     prop.enqueue(new Callback<Paciente>() {
                         @Override
                         public void onResponse(Call<Paciente> call, Response<Paciente> response) {

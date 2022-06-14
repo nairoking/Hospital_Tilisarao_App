@@ -53,6 +53,7 @@ public class PendienteFragment extends Fragment {
                 rvPendientes.setAdapter(adapter);
             }
         });
+        pvm.cargarTurnosPendientes(getArguments());
     }
 
     @Override

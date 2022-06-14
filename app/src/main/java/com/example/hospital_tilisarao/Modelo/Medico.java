@@ -15,6 +15,14 @@ public class Medico implements Serializable {
     public String matricula;
 
 
+    public String getCompleto() {
+        return nombre + " "+ apellido;
+    }
+
+    public String getItem(){
+        return nombre + " "+ apellido + " - " + especialidad;
+    }
+
     public int getId() {
         return id;
     }
