@@ -2,9 +2,11 @@ package com.example.hospital_tilisarao.request;
 
 import android.support.v4.media.MediaDescriptionCompat;
 
+import com.example.hospital_tilisarao.Modelo.HistorialMedico;
 import com.example.hospital_tilisarao.Modelo.Medico;
 import com.example.hospital_tilisarao.Modelo.Paciente;
 import com.example.hospital_tilisarao.Modelo.Turno;
+import com.example.hospital_tilisarao.Modelo.TurnoView;
 import com.example.hospital_tilisarao.Modelo.Usuario;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -24,10 +26,13 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
+import retrofit2.http.Path;
 
 public class ApiRest {
     public static final String UrlBase="http://192.168.1.100:45455/api/";
@@ -112,8 +117,14 @@ public class ApiRest {
         @GET("turno/turnopendiente")
         Call<List<Turno>> obtenerTurnosPendientes(@Header("Authorization") String token);
 
-        @POST("paciente")
-        Call<Turno>altaTurno(@Header("Authorization") String token,@Body Paciente paciente);
+        @POST("turno")
+        Call<Turno> altaTurno (@Header("Authorization") String token, @Body Turno turno);
+
+        @POST("turno/turnoDisponible")
+        Call<List<Turno>> turnosDisponibles(@Header("Authorization") String token,@Body Turno turno);
+
+        @GET("itemhistorial")
+        Call<List<HistorialMedico>> obtenerHistorial(@Header("Authorization") String token);
 
     }
 

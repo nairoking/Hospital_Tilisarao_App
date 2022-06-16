@@ -8,13 +8,26 @@ import java.sql.Time;
 
 public class Turno implements Serializable {
 
-    public int id;
-    public String horaInicio;
-    public String fecha;
-    public int medicoId;
-    public int pacienteId;
-    public Paciente paciente;
-    public  Medico medico;
+    private int id;
+    private String horaInicio;
+    private String fecha;
+    private int medicoId;
+    private int pacienteId;
+    private Paciente paciente;
+    private  Medico medico;
+
+    public Turno(int id, String horaInicio, String fecha, int medicoId, int pacienteId, Paciente paciente, Medico medico) {
+        this.id = id;
+        this.horaInicio = horaInicio;
+        this.fecha = fecha;
+        this.medicoId = medicoId;
+        this.pacienteId = pacienteId;
+        this.paciente = paciente;
+        this.medico = medico;
+    }
+
+    public Turno() {
+    }
 
     public int getId() {
         return id;

@@ -16,6 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,7 @@ import android.widget.Toast;
 import com.bumptech.glide.load.model.ByteArrayLoader;
 import com.example.hospital_tilisarao.Modelo.Medico;
 import com.example.hospital_tilisarao.Modelo.Turno;
+import com.example.hospital_tilisarao.Modelo.TurnoView;
 import com.example.hospital_tilisarao.R;
 
 import java.text.ParseException;
@@ -51,9 +53,10 @@ public class NuevoTurnoFragment extends Fragment {
     private TextView t1,t2,t3,t4,t5,t6,hoy;
     private LinearLayout lyTurnos;
     private CalendarView calendario;
-    List<String> items;
-    List<Medico> med;
-    private Turno nuevoTurno;
+
+    private LocalDate fecha;
+    ArrayList<Medico> medicoArrayList;
+    private Turno otroTurno = new Turno();
     AutoCompleteTextView autoCompleteTextView;
     ArrayAdapter<String> adapterItems;
 
@@ -63,13 +66,16 @@ public class NuevoTurnoFragment extends Fragment {
         return new NuevoTurnoFragment();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_nuevo_turno, container, false);
 
+        mViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(NuevoTurnoViewModel.class);
 
+        fecha = LocalDate.now();
 
        inicializarVista(root);
         return root;
@@ -78,7 +84,7 @@ public class NuevoTurnoFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(NuevoTurnoViewModel.class);
+
         // TODO: Use the ViewModel
     }
 
@@ -94,54 +100,111 @@ public class NuevoTurnoFragment extends Fragment {
         t6 = root.findViewById(R.id.etTurno6);
         hoy = root.findViewById(R.id.tvHoy);
         btBuscar = root.findViewById(R.id.btBuscar);
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String currentDateandTime = simpleDateFormat.format(new Date());
         hoy.setText(currentDateandTime);
 
 
-        mViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(NuevoTurnoViewModel.class);
-        med = mViewModel.getMedicos();
-        items = new ArrayList<>();
-        items = mViewModel.getLista();
-        adapterItems = new ArrayAdapter<String>(getContext(),R.layout.list_item,items);
-        autoCompleteTextView.setAdapter(adapterItems);
-        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+        mViewModel.getItems().observe(getViewLifecycleOwner(), new Observer<List<String>>() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String item = adapterView.getItemAtPosition(i).toString();
-                Toast.makeText(getContext().getApplicationContext(), "Item: "+item + " id: "+ med.get(i).getId(), Toast.LENGTH_SHORT).show();
-                nuevoTurno.setMedicoId(med.get(i).getId());
+            public void onChanged(List<String> items) {
+                adapterItems = new ArrayAdapter<String>(getContext(),R.layout.list_item,items);
+                autoCompleteTextView.setAdapter(adapterItems);
+                autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        String item = adapterView.getItemAtPosition(i).toString();
+                        Toast.makeText(getContext().getApplicationContext(), "Item: "+item + " id: ", Toast.LENGTH_SHORT).show();
+
+                        otroTurno.setMedicoId(medicoArrayList.get(i).getId());
                     }
                 });
-
-        calendario.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
-
-                hoy.setText(i2 +"/"+i1+"/"+i);
             }
         });
-        btBuscar.setOnClickListener(new View.OnClickListener() {
-
+        mViewModel.getMedicos().observe(getViewLifecycleOwner(), new Observer<List<Medico>>() {
             @Override
-            public void onClick(View view) {
-                nuevoTurno.setFecha(hoy.getText().toString());
+            public void onChanged(List<Medico> medicos) {
+                medicoArrayList = (ArrayList<Medico>) medicos;
+            }
+        });
 
 
+        mViewModel.getTurnos().observe(getViewLifecycleOwner(), new Observer<List<Turno>>() {
+            @Override
+            public void onChanged(List<Turno> turnos) {
                 t1.setVisibility(View.VISIBLE);
                 t2.setVisibility(View.VISIBLE);
                 t3.setVisibility(View.VISIBLE);
                 t4.setVisibility(View.VISIBLE);
                 t5.setVisibility(View.VISIBLE);
                 t6.setVisibility(View.VISIBLE);
+                for(int i = 0; i < turnos.size(); i ++)
+                {
+                    switch (turnos.get(i).getHoraInicio()){
+                        case "8:00hs":
+                            t1.setEnabled(false);
+                            break;
+                        case "9:00hs":
+                            t2.setEnabled(false);
+                            break;
+                        case "10:00hs":
+                            t3.setEnabled(false);
+                            break;
+                        case "11:00hs":
+                            t4.setEnabled(false);
+                            break;
+                        case "12:00hs":
+                            t5.setEnabled(false);
+                            break;
+                        case "13:00hs":
+                            t6.setEnabled(false);
+                            break;
+                    }
+                }
+            }
+        });
+
+        calendario.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
+
+                //hoy.setText(i +"-"+i1+"-"+i2);
+                fecha = LocalDate.of(i,i1 + 1,i2);
+                hoy.setText(fecha.toString());
+                Log.d("salida", fecha.toString() + "");
+            }
+        });
+
+        btBuscar.setOnClickListener(new View.OnClickListener() {
+
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void onClick(View view) {
+
+
+
+                    hoy.setText(fecha.toString());
+                    otroTurno.setFecha(fecha.toString());
+
+
+                mViewModel.cargarTurnos(otroTurno);
+
+
 
                 //t6.setBackgroundColor(btn_style);
             }
         });
+
+
         t1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    Toast.makeText(getContext(), " " + t1.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), " " + t1.getText(), Toast.LENGTH_SHORT).show();
+                    otroTurno.setHoraInicio(t1.getText().toString());
+                    mViewModel.nuevoTurno(otroTurno);
+
             }
         });
         t2.setOnClickListener(new View.OnClickListener() {
@@ -174,6 +237,8 @@ public class NuevoTurnoFragment extends Fragment {
                 Toast.makeText(getContext(), " " + t6.getText(), Toast.LENGTH_SHORT).show();
             }
         });
+
+
         mViewModel.cargarMedico();
 
 

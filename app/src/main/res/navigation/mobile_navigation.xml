@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/nav_pendiente"
         android:name="com.example.hospital_tilisarao.ui.turnoPendiente.PendienteFragment"
-        android:label="@string/menu_slideshow"
+        android:label="Turnos Pendientes"
         tools:layout="@layout/fragment_pendiente" />
     <fragment
         android:id="@+id/nav_logout"
@@ -32,4 +32,22 @@
         android:name="com.example.hospital_tilisarao.ui.turnos.NuevoTurnoFragment"
         android:label="@string/nuevo_turno"
         tools:layout="@layout/fragment_nuevo_turno" />
+    <fragment
+        android:id="@+id/nav_historial"
+        android:name="com.example.hospital_tilisarao.ui.historial.HistorialFragment"
+        android:label="fragment_historial"
+        tools:layout="@layout/fragment_historial" >
+        <action
+            android:id="@+id/action_nav_historial_to_historialDetalleFragment"
+            app:destination="@id/historialDetalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historialDetalleFragment"
+        android:name="com.example.hospital_tilisarao.ui.historial.HistorialDetalleFragment"
+        android:label="fragment_historial_detalle"
+        tools:layout="@layout/fragment_historial_detalle" >
+        <action
+            android:id="@+id/action_historialDetalleFragment_to_nav_historial"
+            app:destination="@id/nav_historial" />
+    </fragment>
 </navigation>
