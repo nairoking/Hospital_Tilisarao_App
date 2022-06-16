@@ -43,6 +43,7 @@ public class PendienteFragment extends Fragment {
     private void inicializar(View root) {
 
         rvPendientes = root.findViewById(R.id.rvTurnosPendientes);
+
         pvm = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(PendienteViewModel.class);
         pvm.getLista().observe(getViewLifecycleOwner(), new Observer<List<Turno>>() {
             @Override
@@ -53,8 +54,11 @@ public class PendienteFragment extends Fragment {
                 rvPendientes.setAdapter(adapter);
             }
         });
+
         pvm.cargarTurnosPendientes(getArguments());
     }
+
+
 
     @Override
     public void onDestroyView() {

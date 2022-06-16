@@ -1,12 +1,18 @@
 package com.example.hospital_tilisarao.ui.turnos;
 
 import static com.example.hospital_tilisarao.R.drawable.bt_white;
+import static com.example.hospital_tilisarao.R.drawable.btn_gris;
 import static com.example.hospital_tilisarao.R.drawable.btn_style;
 
 import androidx.annotation.RequiresApi;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,6 +20,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
@@ -103,9 +110,6 @@ public class NuevoTurnoFragment extends Fragment {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String currentDateandTime = simpleDateFormat.format(new Date());
         hoy.setText(currentDateandTime);
-
-
-
         mViewModel.getItems().observe(getViewLifecycleOwner(), new Observer<List<String>>() {
             @Override
             public void onChanged(List<String> items) {
@@ -144,21 +148,33 @@ public class NuevoTurnoFragment extends Fragment {
                     switch (turnos.get(i).getHoraInicio()){
                         case "8:00hs":
                             t1.setEnabled(false);
+                            t1.setTextColor(Color.RED);
+                            t1.setText("8:00sh - Reservado");
                             break;
                         case "9:00hs":
                             t2.setEnabled(false);
+                            t2.setTextColor(Color.RED);
+                            t2.setText("9:00sh - Reservado");
                             break;
                         case "10:00hs":
                             t3.setEnabled(false);
+                            t3.setTextColor(Color.RED);
+                            t3.setText("10:00sh - Reservado");
                             break;
                         case "11:00hs":
                             t4.setEnabled(false);
+                            t4.setTextColor(Color.RED);
+                            t4.setText("11:00sh - Reservado");
                             break;
                         case "12:00hs":
                             t5.setEnabled(false);
+                            t5.setTextColor(Color.RED);
+                            t5.setText("12:00sh - Reservado");
                             break;
                         case "13:00hs":
                             t6.setEnabled(false);
+                            t6.setTextColor(Color.RED);
+                            t6.setText("13:00sh - Reservado");
                             break;
                     }
                 }
@@ -170,7 +186,6 @@ public class NuevoTurnoFragment extends Fragment {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
 
-                //hoy.setText(i +"-"+i1+"-"+i2);
                 fecha = LocalDate.of(i,i1 + 1,i2);
                 hoy.setText(fecha.toString());
                 Log.d("salida", fecha.toString() + "");
@@ -183,17 +198,9 @@ public class NuevoTurnoFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-
-
-                    hoy.setText(fecha.toString());
-                    otroTurno.setFecha(fecha.toString());
-
-
+                hoy.setText(fecha.toString());
+                otroTurno.setFecha(fecha.toString());
                 mViewModel.cargarTurnos(otroTurno);
-
-
-
-                //t6.setBackgroundColor(btn_style);
             }
         });
 
@@ -202,39 +209,152 @@ public class NuevoTurnoFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), " " + t1.getText(), Toast.LENGTH_SHORT).show();
-                    otroTurno.setHoraInicio(t1.getText().toString());
-                    mViewModel.nuevoTurno(otroTurno);
+                otroTurno.setHoraInicio(t1.getText().toString());
+                AlertDialog.Builder alert = new AlertDialog.Builder(getContext())
+                        .setTitle("Confirmar Turno")
+                        .setMessage("Dia " + otroTurno.getFecha() +"\n"+ " Hora: 8:00hs")
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                mViewModel.nuevoTurno(otroTurno);
 
+
+                            }
+                        }).setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                            }
+                        });
+                alert.show();
             }
+
         });
         t2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), " " + t2.getText(), Toast.LENGTH_SHORT).show();
+                otroTurno.setHoraInicio(t2.getText().toString());
+
+                AlertDialog.Builder alert = new AlertDialog.Builder(getContext())
+                        .setTitle("Confirmar Turno")
+                        .setMessage("Dia " + otroTurno.getFecha() +"\n"+ " Hora: 9:00hs")
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                mViewModel.nuevoTurno(otroTurno);
+
+
+                            }
+                        }).setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                            }
+                        });
+                alert.show();
             }
         });
         t3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), " " + t3.getText(), Toast.LENGTH_SHORT).show();
+                otroTurno.setHoraInicio(t3.getText().toString());
+                AlertDialog.Builder alert = new AlertDialog.Builder(getContext())
+                        .setTitle("Confirmar Turno")
+                        .setMessage("Dia " + otroTurno.getFecha() +"\n"+ " Hora: 10:00hs")
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                mViewModel.nuevoTurno(otroTurno);
+
+
+                            }
+                        }).setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                            }
+                        });
+                alert.show();
             }
         });
         t4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), " " + t4.getText(), Toast.LENGTH_SHORT).show();
+                otroTurno.setHoraInicio(t4.getText().toString());
+                AlertDialog.Builder alert = new AlertDialog.Builder(getContext())
+                        .setTitle("Confirmar Turno")
+                        .setMessage("Dia " + otroTurno.getFecha() +"\n"+ " Hora: 11:00hs")
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                mViewModel.nuevoTurno(otroTurno);
+
+
+                            }
+                        }).setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                            }
+                        });
+                alert.show();
             }
         });
         t5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), " " + t5.getText(), Toast.LENGTH_SHORT).show();
+                otroTurno.setHoraInicio(t5.getText().toString());
+                AlertDialog.Builder alert = new AlertDialog.Builder(getContext())
+                        .setTitle("Confirmar Turno")
+                        .setMessage("Dia " + otroTurno.getFecha() +"\n"+ " Hora: 12:00hs")
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                mViewModel.nuevoTurno(otroTurno);
+
+
+                            }
+                        }).setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                            }
+                        });
+                alert.show();
             }
         });
         t6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), " " + t6.getText(), Toast.LENGTH_SHORT).show();
+                otroTurno.setHoraInicio(t6.getText().toString());
+                AlertDialog.Builder alert = new AlertDialog.Builder(getContext())
+                        .setTitle("Confirmar Turno")
+                        .setMessage("Dia " + otroTurno.getFecha() +"\n"+ " Hora: 13:00hs")
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                mViewModel.nuevoTurno(otroTurno);
+
+
+                            }
+                        }).setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                            }
+                        });
+                alert.show();
             }
         });
 
@@ -243,5 +363,7 @@ public class NuevoTurnoFragment extends Fragment {
 
 
     }
+
+
 }
 

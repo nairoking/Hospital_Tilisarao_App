@@ -29,9 +29,16 @@
         <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/layout/nav_header_menu_main.xml" value="0.20923913043478262" />
         <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/menu/activity_main_drawer.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Miguelon/AndroidStudioProjects/Hospital_Tilisarao/app/src/main/res/menu/menu_main_.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/drawable/bt_white.xml" value="0.219" />
+        <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/drawable/btn_gris.xml" value="0.219" />
         <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/drawable/btn_style.xml" value="0.101" />
         <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/drawable/et_style.xml" value="0.101" />
+        <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/drawable/fondo_degradado.xml" value="0.219" />
+        <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/layout/activity_menu_main.xml" value="0.13272543059777103" />
         <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/layout/activity_registro.xml" value="0.13272543059777103" />
+        <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/layout/app_bar_menu_main.xml" value="0.13272543059777103" />
+        <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/layout/content_menu_main.xml" value="0.13272543059777103" />
         <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/layout/fragment_historial.xml" value="0.1" />
         <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/layout/fragment_historial_detalle.xml" value="0.21" />
         <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/layout/fragment_home.xml" value="0.15489130434782608" />
@@ -41,7 +48,9 @@
         <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/layout/item_turno_disponible.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/layout/item_turno_pendiente.xml" value="0.2474437627811861" />
         <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/layout/list_item.xml" value="0.15489130434782608" />
+        <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/layout/nav_header_menu_main.xml" value="0.13272543059777103" />
         <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/menu/activity_main_drawer.xml" value="0.1984375" />
+        <entry key="..\:/Users/Miguelon/Documents/GitHub/Hospital_Tilisarao/app/src/main/res/menu/menu_main_.xml" value="0.23333333333333334" />
       </map>
     </option>
   </component>

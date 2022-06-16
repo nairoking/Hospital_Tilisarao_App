@@ -1,6 +1,5 @@
 package com.example.hospital_tilisarao;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,23 +8,21 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.hospital_tilisarao.Modelo.Paciente;
-import com.example.hospital_tilisarao.request.ApiRest;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class RegistroActivity extends AppCompatActivity {
 
     private EditText etDni, etNombre, etApellido, etTelefono, etContraseña, etMail, etContraseña2;
     private Button btRegistrar;
+    private RegistroActivityViewModel mViewModel;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+        mViewModel= ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(RegistroActivityViewModel.class);
         inicalizarVista();
     }
 
@@ -51,25 +48,7 @@ public class RegistroActivity extends AppCompatActivity {
                     paciente.setClave(etContraseña.getText().toString());
                     paciente.setEmail(etMail.getText().toString());
 
-                    Call<Paciente> prop = ApiRest.getMyApiClient().altaPaciente(paciente);
-                    prop.enqueue(new Callback<Paciente>() {
-                        @Override
-                        public void onResponse(Call<Paciente> call, Response<Paciente> response) {
-                            if(response.isSuccessful()){
-                                Toast.makeText(RegistroActivity.this, "Usuario registrado con exito.", Toast.LENGTH_SHORT).show();
-                                Intent i = new Intent(RegistroActivity.this, MainActivity.class);
-                                startActivity(i);
-                            }else {
-                                Toast.makeText(RegistroActivity.this, "Kasi jaj", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-
-                        @Override
-                        public void onFailure(Call<Paciente> call, Throwable t) {
-
-                            Toast.makeText(RegistroActivity.this, "Ocurrio un error inesperado"+t.getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    });
+                    mViewModel.registrar(paciente);
 
                 }else{
                     Toast.makeText(RegistroActivity.this, "Las Contraseñas no coinciden", Toast.LENGTH_SHORT).show();

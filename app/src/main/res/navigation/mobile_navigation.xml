@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_anuncios"
         android:name="com.example.hospital_tilisarao.ui.anuncios.AnunciosFragment"
-        android:label="@string/anuncios"
+        android:label="Inicio"
         tools:layout="@layout/fragment_home" />
 
     <fragment
@@ -35,7 +35,7 @@
     <fragment
         android:id="@+id/nav_historial"
         android:name="com.example.hospital_tilisarao.ui.historial.HistorialFragment"
-        android:label="fragment_historial"
+        android:label="Historial Medico"
         tools:layout="@layout/fragment_historial" >
         <action
             android:id="@+id/action_nav_historial_to_historialDetalleFragment"
@@ -44,7 +44,7 @@
     <fragment
         android:id="@+id/historialDetalleFragment"
         android:name="com.example.hospital_tilisarao.ui.historial.HistorialDetalleFragment"
-        android:label="fragment_historial_detalle"
+        android:label="Detalles del Historial"
         tools:layout="@layout/fragment_historial_detalle" >
         <action
             android:id="@+id/action_historialDetalleFragment_to_nav_historial"

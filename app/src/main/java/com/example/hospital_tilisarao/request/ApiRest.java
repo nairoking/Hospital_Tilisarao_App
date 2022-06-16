@@ -26,6 +26,7 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -125,6 +126,9 @@ public class ApiRest {
 
         @GET("itemhistorial")
         Call<List<HistorialMedico>> obtenerHistorial(@Header("Authorization") String token);
+
+        @DELETE("turno/{id}")
+        Call<List<Turno>> cancelarTurno(@Header("Authorization")String token, @Path("id") int id);
 
     }
 

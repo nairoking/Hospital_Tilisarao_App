@@ -57,7 +57,6 @@ public class LogoutFragment extends Fragment {
                     }
                 });
         alert.show();
-
     }
 
     @Override
